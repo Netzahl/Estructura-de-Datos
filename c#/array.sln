@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "array", "array\array.csproj", "{AA1FC688-6688-4DF2-A348-6B87636D0EDE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "datAbs", "datAbs\datAbs.csproj", "{808CAA5E-BA6A-4917-A996-2FC01A75D438}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,18 @@ Global
 		{AA1FC688-6688-4DF2-A348-6B87636D0EDE}.Release|x64.Build.0 = Release|Any CPU
 		{AA1FC688-6688-4DF2-A348-6B87636D0EDE}.Release|x86.ActiveCfg = Release|Any CPU
 		{AA1FC688-6688-4DF2-A348-6B87636D0EDE}.Release|x86.Build.0 = Release|Any CPU
+		{808CAA5E-BA6A-4917-A996-2FC01A75D438}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{808CAA5E-BA6A-4917-A996-2FC01A75D438}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{808CAA5E-BA6A-4917-A996-2FC01A75D438}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{808CAA5E-BA6A-4917-A996-2FC01A75D438}.Debug|x64.Build.0 = Debug|Any CPU
+		{808CAA5E-BA6A-4917-A996-2FC01A75D438}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{808CAA5E-BA6A-4917-A996-2FC01A75D438}.Debug|x86.Build.0 = Debug|Any CPU
+		{808CAA5E-BA6A-4917-A996-2FC01A75D438}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{808CAA5E-BA6A-4917-A996-2FC01A75D438}.Release|Any CPU.Build.0 = Release|Any CPU
+		{808CAA5E-BA6A-4917-A996-2FC01A75D438}.Release|x64.ActiveCfg = Release|Any CPU
+		{808CAA5E-BA6A-4917-A996-2FC01A75D438}.Release|x64.Build.0 = Release|Any CPU
+		{808CAA5E-BA6A-4917-A996-2FC01A75D438}.Release|x86.ActiveCfg = Release|Any CPU
+		{808CAA5E-BA6A-4917-A996-2FC01A75D438}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

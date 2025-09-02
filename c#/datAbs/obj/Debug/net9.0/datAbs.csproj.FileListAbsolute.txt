@@ -1,0 +1,15 @@
+C:\Users\mario\OneDrive\Documentos\GitHub\Estructura-de-Datos\c#\datAbs\bin\Debug\net9.0\datAbs.exe
+C:\Users\mario\OneDrive\Documentos\GitHub\Estructura-de-Datos\c#\datAbs\bin\Debug\net9.0\datAbs.deps.json
+C:\Users\mario\OneDrive\Documentos\GitHub\Estructura-de-Datos\c#\datAbs\bin\Debug\net9.0\datAbs.runtimeconfig.json
+C:\Users\mario\OneDrive\Documentos\GitHub\Estructura-de-Datos\c#\datAbs\bin\Debug\net9.0\datAbs.dll
+C:\Users\mario\OneDrive\Documentos\GitHub\Estructura-de-Datos\c#\datAbs\bin\Debug\net9.0\datAbs.pdb
+C:\Users\mario\OneDrive\Documentos\GitHub\Estructura-de-Datos\c#\datAbs\obj\Debug\net9.0\datAbs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mario\OneDrive\Documentos\GitHub\Estructura-de-Datos\c#\datAbs\obj\Debug\net9.0\datAbs.AssemblyInfoInputs.cache
+C:\Users\mario\OneDrive\Documentos\GitHub\Estructura-de-Datos\c#\datAbs\obj\Debug\net9.0\datAbs.AssemblyInfo.cs
+C:\Users\mario\OneDrive\Documentos\GitHub\Estructura-de-Datos\c#\datAbs\obj\Debug\net9.0\datAbs.csproj.CoreCompileInputs.cache
+C:\Users\mario\OneDrive\Documentos\GitHub\Estructura-de-Datos\c#\datAbs\obj\Debug\net9.0\datAbs.sourcelink.json
+C:\Users\mario\OneDrive\Documentos\GitHub\Estructura-de-Datos\c#\datAbs\obj\Debug\net9.0\datAbs.dll
+C:\Users\mario\OneDrive\Documentos\GitHub\Estructura-de-Datos\c#\datAbs\obj\Debug\net9.0\refint\datAbs.dll
+C:\Users\mario\OneDrive\Documentos\GitHub\Estructura-de-Datos\c#\datAbs\obj\Debug\net9.0\datAbs.pdb
+C:\Users\mario\OneDrive\Documentos\GitHub\Estructura-de-Datos\c#\datAbs\obj\Debug\net9.0\datAbs.genruntimeconfig.cache
+C:\Users\mario\OneDrive\Documentos\GitHub\Estructura-de-Datos\c#\datAbs\obj\Debug\net9.0\ref\datAbs.dll
