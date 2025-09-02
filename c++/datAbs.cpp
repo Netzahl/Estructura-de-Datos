@@ -16,7 +16,7 @@ public:
 
     void mostrarDatos(){
 
-        cout<<"Nombre "<<nombre<<", Edad: "<<edad<<endl;
+        cout<<"Nombre: "<<nombre<<", Edad: "<<edad<<endl;
 
     }
 
