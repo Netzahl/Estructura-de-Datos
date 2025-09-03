@@ -1,6 +1,13 @@
 {
     "configurations": [
         {
+            "type": "java",
+            "name": "array",
+            "request": "launch",
+            "mainClass": "java.array",
+            "projectName": "Estructura-de-Datos_fb884075"
+        },
+        {
             "name": "C/C++: cl.exe Compilar y depurar el archivo activo",
             "type": "cppvsdbg",
             "request": "launch",
