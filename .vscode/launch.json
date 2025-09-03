@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "recorrido",
+            "request": "launch",
+            "mainClass": "recorrido",
+            "projectName": "Estructura-de-Datos_fb884075"
+        },
+        {
+            "type": "java",
             "name": "datAbs",
             "request": "launch",
             "mainClass": "datAbs",
