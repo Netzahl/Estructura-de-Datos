@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "datAbs",
+            "request": "launch",
+            "mainClass": "datAbs",
+            "projectName": "Estructura-de-Datos_fb884075"
+        },
+        {
+            "type": "java",
             "name": "array",
             "request": "launch",
             "mainClass": "array",
