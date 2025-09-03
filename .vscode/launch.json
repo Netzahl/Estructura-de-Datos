@@ -4,6 +4,20 @@
             "type": "java",
             "name": "array",
             "request": "launch",
+            "mainClass": "array",
+            "projectName": "Estructura-de-Datos_fb884075"
+        },
+        {
+            "type": "java",
+            "name": "holaMundo",
+            "request": "launch",
+            "mainClass": "holaMundo",
+            "projectName": "Estructura-de-Datos_fb884075"
+        },
+        {
+            "type": "java",
+            "name": "array",
+            "request": "launch",
             "mainClass": "java.array",
             "projectName": "Estructura-de-Datos_fb884075"
         },
