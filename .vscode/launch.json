@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "busqLineal",
+            "request": "launch",
+            "mainClass": "busqLineal",
+            "projectName": "Estructura-de-Datos_fb884075"
+        },
+        {
+            "type": "java",
             "name": "insertar",
             "request": "launch",
             "mainClass": "insertar",
