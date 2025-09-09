@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "recorridoMatriz",
+            "request": "launch",
+            "mainClass": "recorridoMatriz",
+            "projectName": "Estructura-de-Datos_fb884075"
+        },
+        {
+            "type": "java",
             "name": "busqLineal",
             "request": "launch",
             "mainClass": "busqLineal",
