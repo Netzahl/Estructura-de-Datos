@@ -19,7 +19,7 @@ int main(){
 
     for(int i=0;i<10;i++){
         if (numeros[i] == numeroBuscado){
-            posic = i;
+            posic = i + 1;
             bandera =true;
         }
     }
