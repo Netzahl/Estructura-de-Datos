@@ -1,141 +1,23 @@
-############################
-# C++ #
-############################
-*.o
-*.obj
-*.exe
-*.out
-*.a
-*.so
-*.dll
-*.dylib
-*.d          # Archivos de dependencias automáticos
-*.gch
-*.pch
-*.log
+# Ignora TODO por defecto
+*
 
-build/
-cmake-build*/
-Debug/
-Release/
-CMakeCache.txt
-CMakeFiles/
-Makefile
+# Permite carpetas (para mantener la estructura de directorios)
+!*/
 
-############################
-# C# #
-############################
-*.exe
-*.dll
-*.pdb
-*.cache
-*.mdb
+# Permite archivos de código fuente
+!*.cs
+!*.py
+!*.java
+!*.js
+!*.cpp
 
-[Bb]in/
-[Oo]bj/
-[Ll]og/
-[Tt]emp/
+# Permite el archivo .gitignore (opcional pero recomendado)
+!.gitignore
 
-*.user
-*.suo
-*.sln.docstates
-*.userprefs
-.vs/
-_ReSharper*/
-*.ncrunch*
-*.ide
+# Permite archivos README (opcional)
+!README*
+!readme*
 
-*.nuget.props
-*.nuget.targets
-packages/
-
-*.vcxproj*
-*.dbmdl
-
-############################
-# JavaScript (Node.js) #
-############################
-node_modules/
-dist/
-build/
-
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-
-.env
-*.local
-
-coverage/
-.nyc_output/
-.parcel-cache/
-.next/
-.nuxt/
-.svelte-kit/
-
-############################
-# Java #
-############################
-*.class
-*.jar
-*.war
-*.ear
-*.log
-
-target/
-build/
-out/
-
-.idea/
-*.iml
-*.ipr
-*.iws
-.vscode/
-
-.gradle/
-.mvn/
-
-############################
-# Python #
-############################
-*.pyc
-*.pyo
-*.pyd
-__pycache__/
-
-.env/
-.venv/
-env/
-venv/
-
-*.log
-*.pot
-*.mo
-*.sqlite3
-
-dist/
-build/
-*.egg-info/
-
-.ipynb_checkpoints
-pip-log.txt
-pip-delete-this-directory.txt
-
-.pytest_cache/
-.tox/
-htmlcov/
-
-############################
-# Generales #
-############################
-.DS_Store
-Thumbs.db
-ehthumbs.db
-*.swp
-*.bak
-*.tmp
-*.lock
-*.orig
-.Trash-*
-
+# Permite archivos de licencia (opcional)
+!LICENSE*
+!license*
