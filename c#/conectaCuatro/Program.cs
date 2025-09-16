@@ -70,7 +70,7 @@ class ConectaCuatro
             switch (numero)
             {
                 case 1:
-                    for (int i = 5; i > 0; i--)
+                    for (int i = 5; i >= 0; i--)
                     {
                         if (tablero[i, 0] == " ")
                         {
@@ -82,7 +82,7 @@ class ConectaCuatro
                     esValido = false;
                     break;
                 case 2:
-                    for (int i = 5; i > 0; i--)
+                    for (int i = 5; i >= 0; i--)
                     {
                         if (tablero[i, 1] == " ")
                         {
@@ -94,7 +94,7 @@ class ConectaCuatro
                     esValido = false;
                     break;
                 case 3:
-                    for (int i = 5; i > 0; i--)
+                    for (int i = 5; i >= 0; i--)
                     {
                         if (tablero[i, 2] == " ")
                         {
@@ -106,7 +106,7 @@ class ConectaCuatro
                     esValido = false;
                     break;
                 case 4:
-                    for (int i = 5; i > 0; i--)
+                    for (int i = 5; i >= 0; i--)
                     {
                         if (tablero[i, 3] == " ")
                         {
@@ -118,7 +118,7 @@ class ConectaCuatro
                     esValido = false;
                     break;
                 case 5:
-                    for (int i = 5; i > 0; i--)
+                    for (int i = 5; i >= 0; i--)
                     {
                         if (tablero[i, 4] == " ")
                         {
@@ -130,7 +130,7 @@ class ConectaCuatro
                     esValido = false;
                     break;
                 case 6:
-                    for (int i = 5; i > 0; i--)
+                    for (int i = 5; i >= 0; i--)
                     {
                         if (tablero[i, 5] == " ")
                         {
@@ -142,7 +142,7 @@ class ConectaCuatro
                     esValido = false;
                     break;
                 case 7:
-                    for (int i = 5; i > 0; i--)
+                    for (int i = 5; i >= 0; i--)
                     {
                         if (tablero[i, 6] == " ")
                         {
@@ -166,7 +166,6 @@ class ConectaCuatro
         int contador = 0;
         for (int h = 0; h < 42; h++)
         {
-            contador++;
             //Verificacion de Filas
             for (int i = 0; i < 6; i++)
             {
@@ -269,7 +268,7 @@ class ConectaCuatro
                     Dibujar_tablero(tablero);
                 }
             }
-
+            contador++;
 
 
         }
