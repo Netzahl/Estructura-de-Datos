@@ -19,8 +19,11 @@ int main(){
         cout << numeros[i] << " | ";
     }   
     cout << endl;
-
-    for(int j = 9;j>=0;j--){
+    
+    
+    bool cambio = true;
+    do{
+        for(int j = 9;j>=0;j--){
         for(int i=1;i<j+1;i++){
             if (numeros[i-1] > numeros[i]){
                 adicional = numeros[i-1];
@@ -29,7 +32,8 @@ int main(){
             }
         }   
     }
-    
+    }while(cambio == true);
+
     cout << " | ";
     for(int i=0;i<10;i++){
         cout << numeros[i] << " | ";
