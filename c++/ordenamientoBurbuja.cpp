@@ -22,16 +22,18 @@ int main(){
     
     
     bool cambio = true;
+    int j = sizeof(numeros)/sizeof(numeros[0]);
     do{
-        for(int j = 9;j>=0;j--){
-        for(int i=1;i<j+1;i++){
+        cambio = false;
+        for(int i=1;i<j;i++){
             if (numeros[i-1] > numeros[i]){
                 adicional = numeros[i-1];
                 numeros[i-1] = numeros[i];
                 numeros[i] = adicional;
+                cambio = true;
             }
-        }   
-    }
+        }
+        j--;
     }while(cambio == true);
 
     cout << " | ";
