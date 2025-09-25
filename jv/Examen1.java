@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import javax.sound.sampled.SourceDataLine;
 public class Examen1{
     
     public static int[] matriz(){
