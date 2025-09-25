@@ -1,11 +1,3 @@
-
-let a = [10, 7, 8, 9, 1, 5];
-let l = 0;
-let h = a.length - 1;
-show(a);
-a = qckSort(a,l,h)
-show(a);
-
 function swap(a,k,j){
     let adicional = a[k];
     a[k] = a[j];
@@ -25,15 +17,15 @@ function partition(a,l,h){
     }
     a = swap(a,h,j+1)
     j++
-    return {a : a, j : j};
+    return {a, j};
 }
 
 function qckSort(a,l,h){
     if(l<h){
-        let {a, piv} = partition(a,l,h);
+        let {a : arr, j : piv} = partition(a,l,h);
         
-        a = qckSort(a,l,piv-1);
-        a = qckSort(a,piv+1,h);
+        a = qckSort(arr,l,piv-1);
+        a = qckSort(arr,piv+1,h);
     }
     return a;
 }
@@ -44,3 +36,11 @@ function show(a){
     });
     console.log();
 }
+
+let a = [10, 7, 8, 9, 1, 5];
+let l = 0;
+let h = a.length-1;
+show(a);
+a = qckSort(a,l,h)
+show(a);
+
