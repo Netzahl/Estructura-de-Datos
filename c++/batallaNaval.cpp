@@ -156,24 +156,64 @@ void colocarBarcos(vector<vector<string>> &matriz, int barco){
 //Elige el barco sin repetirlo
 void elegirBarcos(vector<vector<string>> &matriz){
     int barco = 0;
-    int armada[] = {0,0,0,0,0};
+    int armada[] = {0,0,0,0,0,0};
     bool bandera = true;;
-    for(int i=0;i<4;i++){
+    for(int i=0;i<5;i++){
         bandera = true;
         cout << "Que barco desea colocar?" << endl;
         do{
             barco = 0;
-            cout << "| 1)Submarino(1 size) | 2)Destructor(2 size) | 3)Crucero(3 size) | 4)Acorazado(4 size) |" << endl;
+            bandera = true;
+            cout << "| 1)Destructor(2 size) | 2)Submarino(3 size) | 3)Crucero(3 size) | 4)Acorazado(4 size) | 5)Portaviones(5 size) |" << endl;
             cin >> barco;
-            if (barco > 4 || barco < 1){
-                cout << "Opcion invalida.\nIngrese de nuevo: " << endl;
-                bandera = false;
-            }else{
+            switch (barco)
+            {
+            case 1:
                 armada[barco] ++;
                 if(armada[barco] > 1){
                     cout << "Opcion ya elegida.\nIngrese de nuevo: " << endl;
                     bandera = false;
                 }
+                barco = 2;
+                break;
+            case 2:
+                armada[barco] ++;
+                if(armada[barco] > 1){
+                    cout << "Opcion ya elegida.\nIngrese de nuevo: " << endl;
+                    bandera = false;
+                }
+                barco = 3;
+                break;
+            case 3:
+                armada[barco] ++;
+                if(armada[barco] > 1){
+                    cout << "Opcion ya elegida.\nIngrese de nuevo: " << endl;
+                    bandera = false;
+                }
+                barco = 3;
+                break;
+            case 4:
+                armada[barco] ++;
+                if(armada[barco] > 1){
+                    cout << "Opcion ya elegida.\nIngrese de nuevo: " << endl;
+                    bandera = false;
+                }
+                barco = 4;
+                break;
+            case 5:
+                armada[barco] ++;
+                if(armada[barco] > 1){
+                    cout << "Opcion ya elegida.\nIngrese de nuevo: " << endl;
+                    bandera = false;
+                }
+                barco = 5;
+                break;
+            default:
+                break;
+            }
+            if (barco > 5 || barco < 2){
+                cout << "Opcion invalida.\nIngrese de nuevo: " << endl;
+                bandera = false;
             }
         }while(!bandera);
 
