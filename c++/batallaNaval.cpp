@@ -4,6 +4,7 @@
 
 using namespace std;
 
+//Muestra el estado actual del tablero
 void mostrarTablero(const vector<vector<string>> &matriz){
     string letras[] = {"A","B","C","D","E","F","G","H","I","J"};
     vector<int> num = {1,2,3,4,5,6,7,8,9,10};
@@ -21,6 +22,7 @@ void mostrarTablero(const vector<vector<string>> &matriz){
     }
 }
 
+//Modifica el tablero al agregar los barcos mediante los datos recibidos
 void modificarTablero(vector<vector<string>> &matriz, int x,int y, int barco,int orientacion){
     if(orientacion == 1){
         for(int i = x; i < x+barco; i++){
@@ -33,6 +35,7 @@ void modificarTablero(vector<vector<string>> &matriz, int x,int y, int barco,int
     }
 }
 
+//Verifica que se pueda colocar el barco de manera exitosa con los datos recibidos
 bool verificarBarcos(const vector<vector<string>> &matriz, int x,int y, int barco,int orientacion){
     if(orientacion == 1){
         if(barco + x > 10){
@@ -63,6 +66,8 @@ bool verificarBarcos(const vector<vector<string>> &matriz, int x,int y, int barc
     }
 }
 
+//Recolecta los datos necesarios para poner los barcos, y manda la informacion recolectada a verificarBarcos()
+//para despues de su verificacion mandar a modificarTablero() y por ultimo mostrarTablero()
 void colocarBarcos(vector<vector<string>> &matriz, int barco){
     string coordenada;
     int x=0,y=0,orientacion = 0;
@@ -148,6 +153,7 @@ void colocarBarcos(vector<vector<string>> &matriz, int barco){
     mostrarTablero(matriz);
 }
 
+//Elige el barco sin repetirlo
 void elegirBarcos(vector<vector<string>> &matriz){
     int barco = 0;
     int armada[] = {0,0,0,0,0};
@@ -176,6 +182,7 @@ void elegirBarcos(vector<vector<string>> &matriz){
     
 }
 
+//Arranca el programa
 int main(){
     vector<vector<string>> matriz(10, vector<string>(10, "   "));
     mostrarTablero(matriz);
