@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import javax.sound.sampled.SourceDataLine;
 public class Examen1{
     
     public static int[] matriz(){
@@ -10,6 +9,7 @@ public class Examen1{
             System.err.println("Dame el numero " + (idx+1) + " del array: ");
             a[idx] = scan.nextInt();
         }
+        scan.close();
         return a;
     }
 
