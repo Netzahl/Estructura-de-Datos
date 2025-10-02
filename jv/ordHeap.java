@@ -1,9 +1,9 @@
 public class ordHeap{
 
     public static void heapSort(int[] a, int h){
-        while(h>=0){
+        while(h>0){
             int adicional =0, j=0;
-            for(int i = h; i>=0;i--){
+            for(int i = h; i>0;i--){
                 j = i/2;
                 if(a[i] > a[j]){
                     adicional = a[i];
