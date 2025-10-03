@@ -2,7 +2,7 @@
 {
     public static void Main(String[] args)
     {
-        int[] numeros = { 33, 54, 66, 12, 64, 35, 47, 98, 5 };
+        int[] numeros = [ 33, 54, 66, 12, 64, 35, 47, 98, 5 ];
         int adicional = 0;
         for (int i = 0; i < numeros.Length; i++)
         {
