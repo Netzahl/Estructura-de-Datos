@@ -15,16 +15,12 @@ int hundido = 0;
 int contjuego=0;
 int fallo=0;
 
-//vector<vector<int>> tableroj1a(GRID_SIZE, vector<int>(GRID_SIZE, 0));
 vector<vector<int>> tableroj1b(GRID_SIZE, vector<int>(GRID_SIZE, 0));
-//vector<vector<int>> tableroj2a(GRID_SIZE, vector<int>(GRID_SIZE, 0));
 vector<vector<int>> tableroj2b(GRID_SIZE, vector<int>(GRID_SIZE, 0));
 
 int ori = 1, barco = 0, barcosPuestos=0;
 int contIni=0;
 vector<int> bar(6,0);
-//Color transparente = {0,0,0,0};
-//vector<Color> colors = {transparente,RED,SKYBLUE,GREEN,YELLOW,VIOLET,ORANGE,BROWN};
 
 bool isTurnTransition;
 bool isTurnHundir;
@@ -32,11 +28,9 @@ int currentPlayer = 1;
 // 1. Duración deseada de la pausa (ej: 2.0 segundos)
 const float PAUSE_DURATION = 2.0f; 
 
-// 2. Bandera que indica que el juego debe estar en pausa.
 bool isPausedByTimer = false;
 bool isPausedByHundir = false;
 
-// 3. Contador de tiempo restante.
 float pauseTimer = 0.0f; 
 /**
  * @brief Inicia la transición de turno, pausa el juego y prepara el cambio de jugador.
@@ -52,19 +46,12 @@ void StartHundir() {
 void StartTurnTransition() {
     // 1. Activa el flag de transición/pausa.
     isTurnTransition = true; 
-    
-    // 2. Aquí PUEDES cambiar el jugador si quieres que la pantalla muestre
-    //    el turno del *siguiente* jugador (el que está por comenzar).
-    //    Si prefieres que la pantalla muestre el turno del jugador *actual* (el que acaba de terminar),
-    //    entonces mueve esta línea al UpdateTurnTransition().
     currentPlayer = (currentPlayer == 1) ? 2 : 1; 
-    
-    // Opcional: Muestra en consola quién está por jugar
     cout << "Transicion iniciada. El siguiente turno es para el Jugador: " << currentPlayer << endl;
 }
 
 void UpdateHundir() {
-    // Si NO estamos en modo transición, no hagas nada.
+    
     if (!isTurnHundir) {
         return;
     }
@@ -72,19 +59,16 @@ void UpdateHundir() {
     ClearBackground(GRAY);
     DrawText("Has hundido una\n nave enemiga\nCambio de turno\nPresione E", MARGIN, SCREEN_HEIGHT/2, 38, BLACK);
     fallo = 0;
-    // Si estamos en transición, el juego está pausado y esperamos 'E'.
+    
     if (IsKeyPressed(KEY_E)) {
         
-        // 1. Termina la transición (quita la pantalla de pausa)
         isTurnHundir = false;
-        
-        // 2. NOTA: Ya no cambiamos el jugador aquí, porque se hizo en StartTurnTransition()
         cout << "Teclado E presionado. Turno activo para el Jugador: " << currentPlayer << endl;
     }
 }
 
 void UpdateTurnTransition() {
-    // Si NO estamos en modo transición, no hagas nada.
+    
     if (!isTurnTransition) {
         return;
     }
@@ -92,54 +76,37 @@ void UpdateTurnTransition() {
     ClearBackground(GRAY);
     DrawText("Cambio de turno\nPresione E", MARGIN, SCREEN_HEIGHT/2, 38, BLACK);
     fallo = 0;
-    // Si estamos en transición, el juego está pausado y esperamos 'E'.
+    
     if (IsKeyPressed(KEY_E)) {
-        
-        // 1. Termina la transición (quita la pantalla de pausa)
+
         isTurnTransition = false;
-        
-        // 2. NOTA: Ya no cambiamos el jugador aquí, porque se hizo en StartTurnTransition()
         cout << "Teclado E presionado. Turno activo para el Jugador: " << currentPlayer << endl;
     }
 }
 
 void UpdatePausehundir() {
-    // Solo actualiza si la bandera de pausa está activa
+
     if (isPausedByHundir) {
         
-        // Descuenta el tiempo que tomó renderizar el último fotograma.
-        // GetFrameTime() da el tiempo exacto en segundos.
         pauseTimer -= GetFrameTime(); 
 
-        // Cuando el contador llega a cero o menos, la pausa termina.
         if (pauseTimer <= 0.0f) {
-            
-            // 1. Desactiva la bandera de pausa. El juego se reanuda.
+
             isPausedByHundir = false;
             
-            // 2. ✨ Aquí llamas a la función que debe ejecutarse al terminar la pausa ✨
-            // Por ejemplo: iniciar un cambio de turno, o mover a la IA.
             StartHundir();
         }
     }
 }
 
 void UpdatePauseTimer() {
-    // Solo actualiza si la bandera de pausa está activa
+
     if (isPausedByTimer) {
-        
-        // Descuenta el tiempo que tomó renderizar el último fotograma.
-        // GetFrameTime() da el tiempo exacto en segundos.
         pauseTimer -= GetFrameTime(); 
 
-        // Cuando el contador llega a cero o menos, la pausa termina.
         if (pauseTimer <= 0.0f) {
             
-            // 1. Desactiva la bandera de pausa. El juego se reanuda.
             isPausedByTimer = false;
-            
-            // 2. ✨ Aquí llamas a la función que debe ejecutarse al terminar la pausa ✨
-            // Por ejemplo: iniciar un cambio de turno, o mover a la IA.
             StartTurnTransition();
         }
     }
@@ -149,11 +116,11 @@ void verificacion_de_colocacion(int a, int b,vector<vector<int>>& arr) {
     if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
         Vector2 mousePos = GetMousePosition();
         
-        // 1. Asegurarse de que el clic esté dentro del área de la cuadrícula
+        // Asegurarse de que el clic esté dentro del área de la cuadrícula
         if (mousePos.x >= MARGIN && mousePos.x <= SCREEN_WIDTH - MARGIN &&
             mousePos.y >= MARGIN+350 && mousePos.y <= SCREEN_HEIGHT - MARGIN+350) {
             
-            // 2. Convertir coordenadas de píxeles a índices de cuadrícula (0-9)
+            // Convertir coordenadas de píxeles a índices de cuadrícula (0-9)
             int col = (int)(mousePos.x - MARGIN) / CELL_SIZE;
             int row = (int)(mousePos.y - MARGIN - 350) / CELL_SIZE;
             
