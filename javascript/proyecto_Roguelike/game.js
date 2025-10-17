@@ -6,7 +6,19 @@ const k = kaboom({
     clearColor: [0.1, 0.1, 0.2, 1]
 });
 
-//Declaramos el laberinto y lo construimos, 0 = camino, 1 = pared
+function crearLaberinto(){
+    let lab = Array.from({length: 25 }, () => Array(25).fill(1));
+    
+    for(let i = 1; i < lab.length - 1; i++){
+        for(let j = 1; j < lab[1].length - 1; j++){
+
+        }
+    }
+
+}
+
+//Declaramos el laberinto y lo construimos
+//  0 = camino, 1 = pared, 2 = trampa, 3 = llave, 4 = puerta, 5 = tp
 const laberinto = [
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     [1, 0, 0, 3, 1, 0, 0, 0, 5, 1],
@@ -164,6 +176,7 @@ function dibujarOscuridad(){
     }
 }
 
+//Definimos la funcion par dibujar el campo de vision
 function dibujarCampoVision(posicion){
     const radioVision = 57;
     celdasVisibles.clear();
