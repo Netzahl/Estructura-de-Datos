@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "c#", "c#", "{1DBD47E2-544B-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hashell", "c#\hashell\hashell.csproj", "{AF55DE6E-98FE-4F0E-92F1-B8B61F4BD35F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bucketSort", "c#\bucketSort\bucketSort.csproj", "{68774254-E3DD-4B4D-8698-3B96EB8249B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,11 +31,24 @@ Global
 		{AF55DE6E-98FE-4F0E-92F1-B8B61F4BD35F}.Release|x64.Build.0 = Release|Any CPU
 		{AF55DE6E-98FE-4F0E-92F1-B8B61F4BD35F}.Release|x86.ActiveCfg = Release|Any CPU
 		{AF55DE6E-98FE-4F0E-92F1-B8B61F4BD35F}.Release|x86.Build.0 = Release|Any CPU
+		{68774254-E3DD-4B4D-8698-3B96EB8249B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68774254-E3DD-4B4D-8698-3B96EB8249B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68774254-E3DD-4B4D-8698-3B96EB8249B6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{68774254-E3DD-4B4D-8698-3B96EB8249B6}.Debug|x64.Build.0 = Debug|Any CPU
+		{68774254-E3DD-4B4D-8698-3B96EB8249B6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{68774254-E3DD-4B4D-8698-3B96EB8249B6}.Debug|x86.Build.0 = Debug|Any CPU
+		{68774254-E3DD-4B4D-8698-3B96EB8249B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68774254-E3DD-4B4D-8698-3B96EB8249B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68774254-E3DD-4B4D-8698-3B96EB8249B6}.Release|x64.ActiveCfg = Release|Any CPU
+		{68774254-E3DD-4B4D-8698-3B96EB8249B6}.Release|x64.Build.0 = Release|Any CPU
+		{68774254-E3DD-4B4D-8698-3B96EB8249B6}.Release|x86.ActiveCfg = Release|Any CPU
+		{68774254-E3DD-4B4D-8698-3B96EB8249B6}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{AF55DE6E-98FE-4F0E-92F1-B8B61F4BD35F} = {1DBD47E2-544B-F58A-27AE-70AE938492FA}
+		{68774254-E3DD-4B4D-8698-3B96EB8249B6} = {1DBD47E2-544B-F58A-27AE-70AE938492FA}
 	EndGlobalSection
 EndGlobal
