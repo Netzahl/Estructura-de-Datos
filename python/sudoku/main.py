@@ -1,15 +1,12 @@
-# Juego de Sudoku en Pygame
-
 import pygame
 import sys
 import time
 from sudoku import Sudoku 
 
-# --- 1. Inicialización y Constantes ---
 
 pygame.font.init()
 
-# Dimensiones de la pantalla
+
 WIDTH = 540  # 9 celdas * 60 pixeles
 HEIGHT = 640 # 540 para la parrilla + 100 para la UI
 CELL_SIZE = WIDTH // 9
