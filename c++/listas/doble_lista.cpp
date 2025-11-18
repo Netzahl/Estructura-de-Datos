@@ -8,6 +8,7 @@ struct node
 {
     int data;
     struct node *next;
+    struct node *ant;
 };
 
 struct node *head;
@@ -73,7 +74,7 @@ int main()
 
 void begInsert()
 {
-    struct node *ptr, *temp;
+    struct node *ptr;
     int item;
 
     ptr = new (nothrow) node;
@@ -86,24 +87,15 @@ void begInsert()
     {
         cout << "\nIngrese valor\n";
         cin >> item;
+
         ptr->data = item;
 
-        if(head == NULL)
-        {
-            head = ptr;
-            ptr->next = head; 
+        if(head == NULL){
+            
         }
-        else
-        {
-            temp = head;
-            while(temp->next != head)
-            {
-                temp=temp->next;
-            }
-            ptr->next = head;
-            temp->next = ptr;
-            head = ptr;
-        }
+
+        ptr->next = head;
+        head = ptr;
         cout << "\nNodo insertado";
     }
 }
@@ -124,22 +116,21 @@ void lastInsert()
         cout << "\nIngrese valor:\n";
         cin >> item;
         ptr->data = item;
+        ptr->next = NULL;
 
         if (head == NULL)
         {
             head = ptr;
-            ptr->next = head;
             cout << "\nNodo ingresado";
         }
         else
         {
             temp = head;
-            while (temp->next != head)
+            while (temp->next != NULL)
             {
                 temp = temp->next;
             }
             temp->next = ptr;
-            ptr->next = head;
             cout << "\nNodo insertado";
         }
     }
@@ -166,7 +157,7 @@ void selectInsert()
         if (loc <= 0)
         {
             cout << "\nUbicación no válida. Debe ser 1 o mayor.";
-            delete ptr;
+            delete ptr; 
             return;
         }
 
@@ -181,7 +172,7 @@ void selectInsert()
         for (i = 1; i < loc; i++)
         {
             temp = temp->next;
-            if (temp == head)
+            if (temp == NULL)
             {
                 cout << "\nNo se puede insertar";
                 return;
@@ -195,7 +186,8 @@ void selectInsert()
 
 void beginDelete()
 {
-    struct node *ptr, *temp;
+    struct node *ptr;
+
     if (head == NULL)
     {
         cout << "\nLa lista esta vacia";
@@ -203,20 +195,7 @@ void beginDelete()
     else
     {
         ptr = head;
-        if(head->next == head)
-        {
-            head = NULL;
-        }
-        else
-        {
-            temp = head;
-            while(temp->next != head)
-            {
-                temp = temp->next;
-            }
-            head = ptr->next;
-            temp->next = head;
-        }
+        head = ptr->next;
         delete ptr;
         cout << "\nPrimer nodo eliminado ...";
     }
@@ -230,7 +209,7 @@ void lastDelete()
     {
         cout << "\nLa lista esta vacia";
     }
-    else if(head->next == head)
+    else if(head->next == NULL)
     {
         delete head;
         head = NULL;
@@ -239,12 +218,12 @@ void lastDelete()
     else
     {
         ptr = head;
-        while(ptr->next != head)
+        while(ptr->next != NULL)
         {
             ptr1 = ptr;
             ptr = ptr->next;
         }
-        ptr1->next = head;
+        ptr1->next = NULL;
         delete ptr;
         cout << "\nUltimo nodo eliminado ...";
     }
@@ -259,38 +238,29 @@ void selectDelete()
 
     if(head == NULL)
     {
-        cout << "\nLista vacia";
+        cout << "\nLista vacia, no se puede eliminar";
         return;
     }
-    if(loc <= 0)
+
+    if (loc <= 0)
     {
-        cout << "\nLa ubicacion debe ser 1 o mayor";
+        cout << "\nLa ubicación debe ser 1 o mayor.";
         return;
     }
-    else
+
+    ptr = head;
+    for (i = 0; i<loc; i++)
     {
-        ptr1 = head;
-        ptr = head->next;
+        ptr1 = ptr;
+        ptr = ptr->next;
 
-        for (i = 2; i < loc; i++) 
+        if(ptr == NULL)
         {
-            ptr1 = ptr;
-            ptr = ptr->next;
-
-            if(ptr == head) 
-            {
-                cout << "\nUbicacion fuera de los limites de la lista.";
-                return;
-            }
-        }
-
-        if (ptr == head) 
-        {
-            cout << "\nUbicacion fuera de los limites de la lista.";
+            cout << "\nNo se puede eliminar, ubicacion no encontrada";
             return;
         }
-        ptr1->next = ptr->next;
     }
+    ptr1->next = ptr->next;
     delete ptr;
     cout << "\nNodo eliminado " << loc + 1;
 }
@@ -298,7 +268,7 @@ void selectDelete()
 void search()
 {
     struct node *ptr;
-    int item, i=1;
+    int item, i=0;
     bool flag = false;
     ptr = head;
 
@@ -311,18 +281,16 @@ void search()
         cout << "\nIntroduce el elemento que deseas buscar?\n";
         cin >> item;
 
-        do
+        while(ptr != NULL)
         {
-
             if(ptr->data == item)
             {
-                cout << "\nElemento encontrado en la ubicacion " << i;
+                cout << "\nElemento encontrado en la ubicacion " << i + 1;
                 flag = true;
             }
             i++;
             ptr = ptr->next;
-        }while(ptr != head);
-
+        }
         if(flag == false)
         {
             cout << "\nElemento no encontrado";
@@ -342,11 +310,11 @@ void display()
     else
     {
         cout << "\nImprimiendo valores . . . . . . \n";
-        do
+        while (ptr != NULL)
         {
             cout << ptr->data << "\n";
             ptr = ptr->next;
-        }while(ptr != head);
+        }
     }
 }
 

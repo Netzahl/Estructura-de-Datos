@@ -148,6 +148,13 @@ void selectInsert()
         cout << "\nIntroduce la ubicación despues de la cual deseas ingresar\n";
         cin >> loc;
 
+        if (loc <= 0)
+        {
+            cout << "\nUbicación no válida. Debe ser 1 o mayor.";
+            delete ptr; 
+            return;
+        }
+
         temp = head;
 
         if(temp == NULL)
@@ -222,6 +229,19 @@ void selectDelete()
     int loc, i;
     cout << "\nIntroduzca la ubicacion del nodo despues del cual desea realizar la eliminacion. \n";
     cin >> loc;
+
+    if(head == NULL)
+    {
+        cout << "\nLista vacia, no se puede eliminar";
+        return;
+    }
+
+    if (loc <= 0)
+    {
+        cout << "\nLa ubicación debe ser 1 o mayor.";
+        return;
+    }
+
     ptr = head;
     for (i = 0; i<loc; i++)
     {
@@ -230,7 +250,7 @@ void selectDelete()
 
         if(ptr == NULL)
         {
-            cout << "\nNo se puede eliminar";
+            cout << "\nNo se puede eliminar, ubicacion no encontrada";
             return;
         }
     }
