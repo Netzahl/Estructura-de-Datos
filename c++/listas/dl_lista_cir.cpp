@@ -90,20 +90,23 @@ void begInsert()
         cin >> item;
 
         ptr->data = item;
-        ptr->next = head;
-        ptr->ant = NULL;
-
-        if (head != NULL) 
-        {
-            head->ant = ptr;
-        }
 
         if (head == NULL) 
         {
             tail = ptr;
+            ptr->next = ptr;
+            ptr->ant = ptr;
+        }
+        else
+        {
+            ptr->next = head;
+            ptr->ant = tail;
+            head->ant = ptr;
+            tail->next = ptr;
         }
 
         head = ptr;
+
         cout << "\nNodo insertado";
     }
 }
@@ -124,22 +127,22 @@ void lastInsert()
         cout << "\nIngrese valor:\n";
         cin >> item;
         ptr->data = item;
-        ptr->next = NULL;
 
         if (head == NULL)
         {
             head = ptr;
-            tail = ptr;
-            cout << "\nNodo ingresado";
-            ptr->ant = NULL;
+            ptr->next = ptr;
+            ptr->ant = ptr;
         }
         else
         {
             tail->next = ptr;
+            head->ant = ptr;
             ptr->ant = tail;
-            tail = ptr;
-            cout << "\nNodo insertado";
+            ptr->next = head;
         }
+        tail = ptr;
+        cout << "\nNodo insertado";
     }
 }
 
@@ -180,7 +183,7 @@ void selectInsert()
         for (i = 1; i < loc; i++)
         {
             temp = temp->next;
-            if (temp == NULL)
+            if (temp == head)
             {
                 cout << "\nNo se puede insertar";
                 delete ptr;
@@ -192,12 +195,12 @@ void selectInsert()
         temp->next = ptr;
         ptr->ant = temp;
 
-        if(ptr->next == NULL){
+        if(ptr->next == head){
             tail = ptr;
         }
-        else{
-            ptr->next->ant = ptr;
-        }
+
+        ptr->next->ant = ptr;
+
         cout << "\nNodo insertado";
     }
 }
@@ -210,7 +213,7 @@ void beginDelete()
     {
         cout << "\nLa lista esta vacia";
     }
-    else if(head->next == NULL){
+    else if(head->next == head){
         delete head;
         head = NULL;
         tail = NULL;
@@ -220,7 +223,8 @@ void beginDelete()
     {
         ptr = head;
         head = ptr->next;
-        head->ant = NULL;
+        head->ant = tail;
+        tail->next = head;
         delete ptr;
         cout << "\nPrimer nodo eliminado ...";
     }
@@ -234,7 +238,7 @@ void lastDelete()
     {
         cout << "\nLa lista esta vacia";
     }
-    else if (tail->ant == NULL)
+    else if (tail->ant == tail)
     {
         delete tail;
         head = NULL;
@@ -245,7 +249,7 @@ void lastDelete()
     {
         ptr = tail;
         tail = tail->ant;
-        tail -> next = NULL;
+        tail -> next = head;
         delete ptr;
         cout << "\nUltimo nodo eliminado ...";
     }
@@ -276,18 +280,16 @@ void selectDelete()
         ptr1 = ptr;
         ptr = ptr->next;
 
-        if (ptr == NULL)
+        if (ptr == head)
         {
             cout << "\nNo se puede eliminar, ubicacion no encontrada";
             return;
         }
     }
     ptr1->next = ptr->next;
+    ptr->next->ant = ptr1;
 
-    if(ptr->next != NULL){
-        ptr->next->ant = ptr1;
-    }
-    else{
+    if(ptr->next == head){
         tail = ptr1;
     }
 
@@ -311,16 +313,17 @@ void search()
         cout << "\nIntroduce el elemento que deseas buscar?\n";
         cin >> item;
 
-        while (ptr != NULL)
+        do
         {
-            if (ptr->data == item)
+            if (ptr->data == item) 
             {
                 cout << "\nElemento encontrado en la ubicacion " << i + 1;
                 flag = true;
             }
             i++;
             ptr = ptr->next;
-        }
+        }while(ptr != head);
+
         if (flag == false)
         {
             cout << "\nElemento no encontrado";
@@ -340,10 +343,10 @@ void display()
     else
     {
         cout << "\nImprimiendo valores . . . . . . \n";
-        while (ptr != NULL)
+        do
         {
             cout << ptr->data << "\n";
             ptr = ptr->next;
-        }
+        }while(ptr != head);
     }
 }
