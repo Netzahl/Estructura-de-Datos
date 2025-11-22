@@ -1,217 +1,92 @@
+﻿# ===============================================
+# ENTORNOS VIRTUALES Y DEPENDENCIAS (NO SUBIR)
 # ===============================================
-# ARCHIVOS DE SISTEMA Y EDITOR (Globales)
-# ===============================================
-# Archivos temporales del sistema
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-desktop.ini
-
-# Archivos de IDE/Editores comunes
-# Visual Studio Code
-.vscode/
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-
-# IntelliJ IDEA
-.idea/
-*.iml
-*.iws
-*.ipr
-
-# Eclipse
-.settings/
-.metadata/
-bin/
-tmp/
-*.tmp
-*.bak
-*.swp
-*~.nib
-local.properties
-.loadpath
-
-# ===============================================
-# JAVA
-# ===============================================
-# Archivos compilados
-*.class
-*.war
-*.ear
-*.jar
-
-# Directorios de build
-target/
-build/
-out/
-dist/
-
-# Logs
-*.log
-
-# Archivos de dependencias (Maven/Gradle)
-# (Pero preserva archivos de configuración: pom.xml, build.gradle)
-dependency-reduced-pom.xml
-
-# ===============================================
-# JAVASCRIPT/NODE.JS
-# ===============================================
-# Dependencias
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-lerna-debug.log*
-
-# Archivos de entorno
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Build outputs
-dist/
-build/
-.nyc_output
-coverage/
-
-# Paquetes
-*.tgz
-
-# ===============================================
-# C++
-# ===============================================
-# Ejecutables y bibliotecas
-*.exe
-*.out
-*.app
-*.so
-*.dylib
-*.dll
-
-# Archivos objeto y intermedios
-*.o
-*.obj
-*.ko
-*.ilk
-*.pdb
-
-# Directorios de build
-Debug/
-Release/
-x64/
-x86/
-build/
-CMakeFiles/
-CMakeCache.txt
-
-# ===============================================
-# C# /.NET
-# ===============================================
-# Archivos de compilación
-bin/
-obj/
-*.pdb
-*.user
-*.aps
-*.pch
-*.vspscc
-*.vssscc
-*_i.c
-*_p.c
-*.ncb
-*.suo
-*.tlb
-*.tlh
-*.bak
-*.cache
-*.ilk
-*.log
-*.lib
-*.sbr
-*.scc
-
-# Paquetes NuGet
-packages/
-*.nupkg
-*.snupkg
-
-# ===============================================
-# PYTHON
-# ===============================================
-# Bytecode compilado
-__pycache__/
-*.py[cod]
-*$py.class
-
-# Entornos virtuales
+# Python
 venv/
 env/
 ENV/
-env.bak/
-venv.bak/
-
-# Distribución / empaquetado
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
+__pycache__/
+*.pyc
+*.pyo
 *.egg-info/
-.installed.cfg
-*.egg
+.Python
 
-# Archivos de instalación
-pip-log.txt
-pip-delete-this-directory.txt
+# Node.js
+node_modules/
+package-lock.json
 
-# Reportes de pruebas y cobertura
-.tox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-.hypothesis/
-.pytest_cache/
+# Java (Maven/Gradle)
+target/
+.gradle/
+build/
 
-# Jupyter Notebook
-.ipynb_checkpoints
+# C++ (archivos temporales de compilación)
+*.o
+*.obj
+*.ilk
+*.pdb
+
+# .NET
+bin/Debug/
+obj/Debug/
+bin/Release/
+obj/Release/
+*.user
 
 # ===============================================
-# EXCEPCIONES IMPORTANTES (¡NO IGNORAR!)
+# ARCHIVOS DE IDE (NO SUBIR)
 # ===============================================
-# Preservar archivos de configuración esenciales
-!package.json
+.vscode/
+.idea/
+*.iml
+.settings/
+.vs/
+
+# ===============================================
+# ARCHIVOS DEL SISTEMA (NO SUBIR)
+# ===============================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===============================================
+# ARCHIVOS TEMPORALES (NO SUBIR)
+# ===============================================
+*.tmp
+*.bak
+*.swp
+*.log
+*~
+
+# ===============================================
+# QUÉ SÍ INCLUIR (explícito)
+# ===============================================
+# Código fuente
+!*.py
+!*.java
+!*.cpp
+!*.h
+!*.hpp
+!*.c
+!*.cs
+!*.js
+!*.ts
+
+# Archivos de configuración de proyecto
 !pom.xml
 !build.gradle
+!package.json
 !requirements.txt
-!setup.py
 !CMakeLists.txt
 !*.csproj
 !*.sln
-!*.vcxproj
-!*.py
-!*.java
-!*.js
-!*.cpp
-!*.h
-!*.cs
+!Makefile
 
-# Preservar directorios vacíos necesarios
-!*/placeholder.txt
+# Ejecutables necesarios (si tu profesor los necesita)
+!*.exe
+!*.out
+!*.app
+
+# README y documentación
+!README.md
+!*.md
