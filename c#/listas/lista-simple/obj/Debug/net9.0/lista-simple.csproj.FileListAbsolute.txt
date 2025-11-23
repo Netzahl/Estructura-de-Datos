@@ -1,0 +1,15 @@
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\lista-simple\bin\Debug\net9.0\lista-simple.exe
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\lista-simple\bin\Debug\net9.0\lista-simple.deps.json
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\lista-simple\bin\Debug\net9.0\lista-simple.runtimeconfig.json
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\lista-simple\bin\Debug\net9.0\lista-simple.dll
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\lista-simple\bin\Debug\net9.0\lista-simple.pdb
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\lista-simple\obj\Debug\net9.0\lista-simple.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\lista-simple\obj\Debug\net9.0\lista-simple.AssemblyInfoInputs.cache
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\lista-simple\obj\Debug\net9.0\lista-simple.AssemblyInfo.cs
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\lista-simple\obj\Debug\net9.0\lista-simple.csproj.CoreCompileInputs.cache
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\lista-simple\obj\Debug\net9.0\lista-simple.sourcelink.json
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\lista-simple\obj\Debug\net9.0\lista-simple.dll
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\lista-simple\obj\Debug\net9.0\refint\lista-simple.dll
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\lista-simple\obj\Debug\net9.0\lista-simple.pdb
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\lista-simple\obj\Debug\net9.0\lista-simple.genruntimeconfig.cache
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\lista-simple\obj\Debug\net9.0\ref\lista-simple.dll

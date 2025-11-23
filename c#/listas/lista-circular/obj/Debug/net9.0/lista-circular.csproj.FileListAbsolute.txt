@@ -1,0 +1,15 @@
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\lista-circular\bin\Debug\net9.0\lista-circular.exe
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\lista-circular\bin\Debug\net9.0\lista-circular.deps.json
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\lista-circular\bin\Debug\net9.0\lista-circular.runtimeconfig.json
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\lista-circular\bin\Debug\net9.0\lista-circular.dll
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\lista-circular\bin\Debug\net9.0\lista-circular.pdb
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\lista-circular\obj\Debug\net9.0\lista-circular.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\lista-circular\obj\Debug\net9.0\lista-circular.AssemblyInfoInputs.cache
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\lista-circular\obj\Debug\net9.0\lista-circular.AssemblyInfo.cs
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\lista-circular\obj\Debug\net9.0\lista-circular.csproj.CoreCompileInputs.cache
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\lista-circular\obj\Debug\net9.0\lista-circular.sourcelink.json
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\lista-circular\obj\Debug\net9.0\lista-circular.dll
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\lista-circular\obj\Debug\net9.0\refint\lista-circular.dll
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\lista-circular\obj\Debug\net9.0\lista-circular.pdb
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\lista-circular\obj\Debug\net9.0\lista-circular.genruntimeconfig.cache
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\lista-circular\obj\Debug\net9.0\ref\lista-circular.dll

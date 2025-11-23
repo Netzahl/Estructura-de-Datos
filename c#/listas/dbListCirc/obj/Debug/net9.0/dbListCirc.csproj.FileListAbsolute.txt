@@ -1,0 +1,15 @@
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\dbListCirc\bin\Debug\net9.0\dbListCirc.exe
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\dbListCirc\bin\Debug\net9.0\dbListCirc.deps.json
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\dbListCirc\bin\Debug\net9.0\dbListCirc.runtimeconfig.json
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\dbListCirc\bin\Debug\net9.0\dbListCirc.dll
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\dbListCirc\bin\Debug\net9.0\dbListCirc.pdb
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\dbListCirc\obj\Debug\net9.0\dbListCirc.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\dbListCirc\obj\Debug\net9.0\dbListCirc.AssemblyInfoInputs.cache
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\dbListCirc\obj\Debug\net9.0\dbListCirc.AssemblyInfo.cs
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\dbListCirc\obj\Debug\net9.0\dbListCirc.csproj.CoreCompileInputs.cache
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\dbListCirc\obj\Debug\net9.0\dbListCirc.sourcelink.json
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\dbListCirc\obj\Debug\net9.0\dbListCirc.dll
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\dbListCirc\obj\Debug\net9.0\refint\dbListCirc.dll
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\dbListCirc\obj\Debug\net9.0\dbListCirc.pdb
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\dbListCirc\obj\Debug\net9.0\dbListCirc.genruntimeconfig.cache
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\dbListCirc\obj\Debug\net9.0\ref\dbListCirc.dll

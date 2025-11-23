@@ -1,0 +1,15 @@
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\dobleLista\bin\Debug\net9.0\dobleLista.exe
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\dobleLista\bin\Debug\net9.0\dobleLista.deps.json
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\dobleLista\bin\Debug\net9.0\dobleLista.runtimeconfig.json
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\dobleLista\bin\Debug\net9.0\dobleLista.dll
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\dobleLista\bin\Debug\net9.0\dobleLista.pdb
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\dobleLista\obj\Debug\net9.0\dobleLista.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\dobleLista\obj\Debug\net9.0\dobleLista.AssemblyInfoInputs.cache
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\dobleLista\obj\Debug\net9.0\dobleLista.AssemblyInfo.cs
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\dobleLista\obj\Debug\net9.0\dobleLista.csproj.CoreCompileInputs.cache
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\dobleLista\obj\Debug\net9.0\dobleLista.sourcelink.json
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\dobleLista\obj\Debug\net9.0\dobleLista.dll
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\dobleLista\obj\Debug\net9.0\refint\dobleLista.dll
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\dobleLista\obj\Debug\net9.0\dobleLista.pdb
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\dobleLista\obj\Debug\net9.0\dobleLista.genruntimeconfig.cache
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\listas\dobleLista\obj\Debug\net9.0\ref\dobleLista.dll
