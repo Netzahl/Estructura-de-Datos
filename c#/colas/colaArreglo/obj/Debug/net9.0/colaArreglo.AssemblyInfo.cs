@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("SnakeV2")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("colaArreglo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+661aa8ebdd007d281bcdf46e568a9d5d660d3f61")]
-[assembly: System.Reflection.AssemblyProductAttribute("SnakeV2")]
-[assembly: System.Reflection.AssemblyTitleAttribute("SnakeV2")]
+[assembly: System.Reflection.AssemblyProductAttribute("colaArreglo")]
+[assembly: System.Reflection.AssemblyTitleAttribute("colaArreglo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Generado por la clase WriteCodeFragment de MSBuild.

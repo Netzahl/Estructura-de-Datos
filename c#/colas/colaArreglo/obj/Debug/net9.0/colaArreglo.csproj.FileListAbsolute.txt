@@ -1,0 +1,15 @@
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\colas\colaArreglo\bin\Debug\net9.0\colaArreglo.exe
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\colas\colaArreglo\bin\Debug\net9.0\colaArreglo.deps.json
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\colas\colaArreglo\bin\Debug\net9.0\colaArreglo.runtimeconfig.json
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\colas\colaArreglo\bin\Debug\net9.0\colaArreglo.dll
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\colas\colaArreglo\bin\Debug\net9.0\colaArreglo.pdb
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\colas\colaArreglo\obj\Debug\net9.0\colaArreglo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\colas\colaArreglo\obj\Debug\net9.0\colaArreglo.AssemblyInfoInputs.cache
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\colas\colaArreglo\obj\Debug\net9.0\colaArreglo.AssemblyInfo.cs
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\colas\colaArreglo\obj\Debug\net9.0\colaArreglo.csproj.CoreCompileInputs.cache
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\colas\colaArreglo\obj\Debug\net9.0\colaArreglo.sourcelink.json
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\colas\colaArreglo\obj\Debug\net9.0\colaArreglo.dll
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\colas\colaArreglo\obj\Debug\net9.0\refint\colaArreglo.dll
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\colas\colaArreglo\obj\Debug\net9.0\colaArreglo.pdb
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\colas\colaArreglo\obj\Debug\net9.0\colaArreglo.genruntimeconfig.cache
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\colas\colaArreglo\obj\Debug\net9.0\ref\colaArreglo.dll

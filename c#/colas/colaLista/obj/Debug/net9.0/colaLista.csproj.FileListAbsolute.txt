@@ -1,0 +1,15 @@
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\colas\colaLista\bin\Debug\net9.0\colaLista.exe
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\colas\colaLista\bin\Debug\net9.0\colaLista.deps.json
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\colas\colaLista\bin\Debug\net9.0\colaLista.runtimeconfig.json
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\colas\colaLista\bin\Debug\net9.0\colaLista.dll
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\colas\colaLista\bin\Debug\net9.0\colaLista.pdb
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\colas\colaLista\obj\Debug\net9.0\colaLista.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\colas\colaLista\obj\Debug\net9.0\colaLista.AssemblyInfoInputs.cache
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\colas\colaLista\obj\Debug\net9.0\colaLista.AssemblyInfo.cs
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\colas\colaLista\obj\Debug\net9.0\colaLista.csproj.CoreCompileInputs.cache
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\colas\colaLista\obj\Debug\net9.0\colaLista.sourcelink.json
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\colas\colaLista\obj\Debug\net9.0\colaLista.dll
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\colas\colaLista\obj\Debug\net9.0\refint\colaLista.dll
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\colas\colaLista\obj\Debug\net9.0\colaLista.pdb
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\colas\colaLista\obj\Debug\net9.0\colaLista.genruntimeconfig.cache
+C:\Dev\Universidad\2025-3\EstructuraBasesDatos\c#\colas\colaLista\obj\Debug\net9.0\ref\colaLista.dll
