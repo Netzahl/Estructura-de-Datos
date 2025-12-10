@@ -1,0 +1,56 @@
+{
+  "version": "1.0",
+  "contador_id": 7,
+  "root": {
+    "id": 0,
+    "nombre": "root",
+    "tipo": "carpeta",
+    "contenido": "",
+    "children": [
+      {
+        "id": 1,
+        "nombre": "mis_proyectos",
+        "tipo": "carpeta",
+        "contenido": "",
+        "children": [
+          {
+            "id": 2,
+            "nombre": "web",
+            "tipo": "carpeta",
+            "contenido": "",
+            "children": [
+              {
+                "id": 3,
+                "nombre": "index.html",
+                "tipo": "archivo",
+                "contenido": "<html>Hola</html>",
+                "children": []
+              },
+              {
+                "id": 4,
+                "nombre": "style.css",
+                "tipo": "archivo",
+                "contenido": "body { color: red; }",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "nombre": "mobile",
+            "tipo": "carpeta",
+            "contenido": "",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "nombre": "README.md",
+        "tipo": "archivo",
+        "contenido": "# Mi Proyecto",
+        "children": []
+      }
+    ]
+  }
+}

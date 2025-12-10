@@ -216,3 +216,107 @@ class Arbol:
     def obtener_directorio_actual(self):
         """Retorna el directorio actual."""
         return self.ruta_actual
+    
+    def guardar_json(self, archivo):
+        """Guarda el árbol completo en un archivo JSON."""
+        import json
+        
+        try:
+            data = {
+                "version": "1.0",
+                "contador_id": self.contador_id,
+                "root": self.root.to_dict()
+            }
+            
+            with open(archivo, 'w', encoding='utf-8') as f:
+                json.dump(data, f, indent=2, ensure_ascii=False)
+            
+            return True, f"Árbol guardado en {archivo}"
+        except Exception as e:
+            return False, f"Error al guardar: {str(e)}"
+        
+
+    def cargar_json(self, archivo):
+        """Carga el árbol desde un archivo JSON."""
+        import json
+        
+        try:
+            with open(archivo, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            
+            # Resetear el árbol
+            self.nodos.clear()
+            self.papelera.clear()
+            
+            # Restaurar contador
+            self.contador_id = data.get("contador_id", 1)
+            
+            # Reconstruir el árbol recursivamente
+            def reconstruir_nodo(nodo_dict, padre=None):
+                """Reconstruye un nodo y sus hijos desde un diccionario."""
+                nodo = Nodo(
+                    nodo_dict["id"],
+                    nodo_dict["nombre"],
+                    nodo_dict["tipo"],
+                    nodo_dict.get("contenido", ""),
+                    padre
+                )
+                
+                # Agregar al hash map
+                self.nodos[nodo.id] = nodo
+                
+                # Reconstruir hijos recursivamente
+                for hijo_dict in nodo_dict.get("children", []):
+                    hijo = reconstruir_nodo(hijo_dict, nodo)
+                    nodo.children.append(hijo)
+                
+                return nodo
+            
+            # Reconstruir desde la raíz
+            self.root = reconstruir_nodo(data["root"])
+            self.ruta_actual = "/root"
+            
+            return True, f"Árbol cargado desde {archivo}"
+        
+        except FileNotFoundError:
+            return False, f"Archivo {archivo} no encontrado"
+        except json.JSONDecodeError:
+            return False, "Archivo JSON corrupto o mal formateado"
+        except Exception as e:
+            return False, f"Error al cargar: {str(e)}"
+        
+    def exportar_preorden(self, archivo=None):
+        """
+        Exporta el recorrido en preorden del árbol.
+        Si archivo es None, retorna lista. Si no, guarda en archivo.
+        """
+        resultado = []
+        
+        def recorrer_preorden(nodo):
+            """Recorrido preorden: Raíz -> Hijos (izq a der)."""
+            # Visitar nodo actual
+            resultado.append({
+                "id": nodo.id,
+                "nombre": nodo.nombre,
+                "tipo": nodo.tipo,
+                "ruta": nodo.obtener_ruta(),
+                "contenido": nodo.contenido if nodo.tipo == "archivo" else ""
+            })
+            
+            # Visitar hijos
+            for hijo in nodo.children:
+                recorrer_preorden(hijo)
+        
+        recorrer_preorden(self.root)
+        
+        # Si se especifica archivo, guardar
+        if archivo:
+            try:
+                import json
+                with open(archivo, 'w', encoding='utf-8') as f:
+                    json.dump(resultado, f, indent=2, ensure_ascii=False)
+                return resultado, f"Recorrido exportado a {archivo}"
+            except Exception as e:
+                return None, f"Error al exportar: {str(e)}"
+        
+        return resultado, "Recorrido generado"
