@@ -1,5 +1,6 @@
 """Módulo que implementa el árbol general de archivos/carpetas."""
 from src.node import Nodo
+from src.trie import Trie
 
 class Arbol:
     """Árbol general que gestiona la jerarquía de nodos."""
@@ -10,6 +11,8 @@ class Arbol:
         self.nodos = {0: self.root}
         self.papelera = []
         self.ruta_actual = "/root"
+        self.trie = Trie()  
+        self.trie.insertar("root", 0) 
     
     def _encontrar_nodo_por_ruta(self, ruta):
         """Encuentra un nodo por su ruta."""
@@ -52,6 +55,8 @@ class Arbol:
         
         padre.agregar_hijo(nuevo_nodo)
         self.nodos[nuevo_nodo.id] = nuevo_nodo
+
+        self.trie.insertar(nombre, nuevo_nodo.id)  
         
         return nuevo_nodo, "Nodo creado exitosamente"
     
@@ -124,6 +129,10 @@ class Arbol:
         for hijo in padre.children:
             if hijo != nodo and hijo.nombre == nuevo_nombre:
                 return False, f"Ya existe un nodo con el nombre '{nuevo_nombre}' en esta ubicación"
+            
+        nombre_viejo = nodo.nombre
+        self.trie.eliminar(nombre_viejo, node_id)  
+        self.trie.insertar(nuevo_nombre, node_id)  
         
         nodo.nombre = nuevo_nombre
         return True, "Nodo renombrado exitosamente"
@@ -141,6 +150,7 @@ class Arbol:
         
         def recolectar_ids(n):
             ids_eliminados.append(n.id)
+            self.trie.eliminar(n.nombre, n.id)
             for hijo in n.children:
                 recolectar_ids(hijo)
         
@@ -275,6 +285,8 @@ class Arbol:
             # Reconstruir desde la raíz
             self.root = reconstruir_nodo(data["root"])
             self.ruta_actual = "/root"
+
+            self.trie.reconstruir_desde_arbol(self) 
             
             return True, f"Árbol cargado desde {archivo}"
         
