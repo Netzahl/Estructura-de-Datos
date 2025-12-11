@@ -26,6 +26,7 @@ class CLI:
         print("save <archivo>              - Guardar árbol a JSON")
         print("load <archivo>              - Cargar árbol desde JSON")
         print("trash                       - Ver papelera")
+        print("restore <indice>            - Restaurar de papelera")
         print("emptytrash                  - Vaciar papelera")
         print("info <id>                   - Información de nodo")
         print("cd <ruta>                   - Cambiar directorio actual")
@@ -184,6 +185,17 @@ class CLI:
                         print(f"  [{i}] {icono} {nombre} (ID: {node_id}, {cant} elementos)")
                 else:
                     print(f"✓ {msg}")
+
+            elif cmd == "restore":
+                if len(args) < 1:
+                    print("❌ Uso: restore <indice>")
+                    return
+                indice = int(args[0])
+                exito, msg = self.arbol.restaurar_papelera(indice)
+                if exito:
+                    print(f"✓ {msg}")
+                else:
+                    print(f"❌ {msg}")
             
             elif cmd == "emptytrash":
                 exito, msg = self.arbol.vaciar_papelera()

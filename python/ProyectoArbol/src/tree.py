@@ -184,6 +184,44 @@ class Arbol:
         
         return items, "OK"
     
+    def restaurar_papelera(self, indice):
+        """
+        Restaura un elemento de la papelera a su ubicación original.
+        Maneja conflictos de nombres si es necesario.
+        """
+        if indice >= len(self.papelera) or indice < 0:
+            return False, "Índice inválido"
+        
+        item = self.papelera[indice]
+        nodo = item["nodo"]
+        padre_original = item["padre_original"]
+        
+        # Verificar que el padre original aún existe en el árbol
+        if padre_original.id not in self.nodos:
+            return False, "La ubicación original ya no existe"
+        
+        # Verificar conflicto de nombres
+        for hijo in padre_original.children:
+            if hijo.nombre == nodo.nombre:
+                return False, f"Ya existe un nodo con el nombre '{nodo.nombre}' en la ubicación original"
+        
+        # Restaurar el nodo al padre
+        padre_original.agregar_hijo(nodo)
+        
+        # Re-agregar todos los nodos al hash map y al Trie (recursivamente)
+        def reagregar_recursivo(n):
+            self.nodos[n.id] = n
+            self.trie.insertar(n.nombre, n.id)
+            for hijo in n.children:
+                reagregar_recursivo(hijo)
+        
+        reagregar_recursivo(nodo)
+        
+        # Remover de la papelera
+        self.papelera.pop(indice)
+        
+        return True, f"Nodo '{nodo.nombre}' restaurado exitosamente"
+    
     def vaciar_papelera(self):
         """Vacía completamente la papelera."""
         cant = len(self.papelera)
