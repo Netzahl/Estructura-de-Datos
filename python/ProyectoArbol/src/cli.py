@@ -49,27 +49,42 @@ class CLI:
                 self.mostrar_ayuda()
             
             elif cmd == "mkdir":
-                if len(args) < 2:
-                    print("❌ Uso: mkdir <ruta> <nombre>")
+                if len(args) < 1:
+                    print("❌ Uso: mkdir <nombre> o mkdir <ruta> <nombre>")
                     return
-                ruta = args[0]
-                nombre = args[1]
+                
+                # Si solo un argumento, usar ruta actual
+                if len(args) == 1:
+                    ruta = self.arbol.ruta_actual
+                    nombre = args[0]
+                else:
+                    ruta = args[0]
+                    nombre = args[1]
+                
                 nodo, msg = self.arbol.crear_nodo(ruta, nombre, "carpeta")
                 if nodo:
-                    print(f"✓ Carpeta '{nombre}' creada con ID {nodo.id}")
+                    print(f"✓ Carpeta '{nombre}' creada con ID {nodo.id} en {ruta}")
                 else:
                     print(f"❌ {msg}")
             
             elif cmd == "touch":
-                if len(args) < 2:
-                    print("❌ Uso: touch <ruta> <nombre> [contenido]")
+                if len(args) < 1:
+                    print("❌ Uso: touch <nombre> [contenido] o touch <ruta> <nombre> [contenido]")
                     return
-                ruta = args[0]
-                nombre = args[1]
-                contenido = " ".join(args[2:]) if len(args) > 2 else ""
+                
+                # Si primer arg tiene /, es ruta
+                if "/" in args[0] and len(args) >= 2:
+                    ruta = args[0]
+                    nombre = args[1]
+                    contenido = " ".join(args[2:]) if len(args) > 2 else ""
+                else:
+                    ruta = self.arbol.ruta_actual
+                    nombre = args[0]
+                    contenido = " ".join(args[1:]) if len(args) > 1 else ""
+                
                 nodo, msg = self.arbol.crear_nodo(ruta, nombre, "archivo", contenido)
                 if nodo:
-                    print(f"✓ Archivo '{nombre}' creado con ID {nodo.id}")
+                    print(f"✓ Archivo '{nombre}' creado con ID {nodo.id} en {ruta}")
                 else:
                     print(f"❌ {msg}")
             

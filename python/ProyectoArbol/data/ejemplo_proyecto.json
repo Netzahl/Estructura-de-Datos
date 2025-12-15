@@ -1,0 +1,64 @@
+{
+  "version": "1.0",
+  "contador_id": 8,
+  "root": {
+    "id": 0,
+    "nombre": "root",
+    "tipo": "carpeta",
+    "contenido": "",
+    "children": [
+      {
+        "id": 1,
+        "nombre": "proyectos",
+        "tipo": "carpeta",
+        "contenido": "",
+        "children": [
+          {
+            "id": 2,
+            "nombre": "web",
+            "tipo": "carpeta",
+            "contenido": "",
+            "children": [
+              {
+                "id": 3,
+                "nombre": "index.html",
+                "tipo": "archivo",
+                "contenido": "<html><body>Hola Mundo</body></html>",
+                "children": []
+              },
+              {
+                "id": 4,
+                "nombre": "style.css",
+                "tipo": "archivo",
+                "contenido": "body { font-family: Arial; }",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "nombre": "README.md",
+            "tipo": "archivo",
+            "contenido": "# Mi Proyecto Web",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "nombre": "documentos",
+        "tipo": "carpeta",
+        "contenido": "",
+        "children": [
+          {
+            "id": 7,
+            "nombre": "notas.txt",
+            "tipo": "archivo",
+            "contenido": "Estas son mis notas del proyecto",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}
