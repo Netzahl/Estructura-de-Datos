@@ -133,6 +133,22 @@ pytest tests/test_tree_basic.py -v
 pytest tests/ --cov=src
 ```
 
+## 🎬 Demo Automatizada
+
+Para ver una demostración completa de todas las funcionalidades:
+```bash
+python demo.py
+```
+
+La demo muestra:
+- Creación de estructura jerárquica
+- Búsqueda con Trie (exacta, prefijo, autocompletado)
+- Operaciones CRUD completas
+- Sistema de papelera y restauración
+- Persistencia JSON (guardar/cargar)
+- Export de recorrido preorden
+- Cálculos sobre el árbol
+
 ## 📖 Ejemplos de Uso
 
 ### Ejemplo 1: Crear Estructura Básica

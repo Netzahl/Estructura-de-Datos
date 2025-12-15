@@ -1,0 +1,58 @@
+[
+  {
+    "id": 0,
+    "nombre": "root",
+    "tipo": "carpeta",
+    "ruta": "/root",
+    "contenido": ""
+  },
+  {
+    "id": 1,
+    "nombre": "mis_proyectos",
+    "tipo": "carpeta",
+    "ruta": "/root/mis_proyectos",
+    "contenido": ""
+  },
+  {
+    "id": 4,
+    "nombre": "web",
+    "tipo": "carpeta",
+    "ruta": "/root/mis_proyectos/web",
+    "contenido": ""
+  },
+  {
+    "id": 5,
+    "nombre": "index.html",
+    "tipo": "archivo",
+    "ruta": "/root/mis_proyectos/web/index.html",
+    "contenido": "<html>Hola Mundo</html>"
+  },
+  {
+    "id": 6,
+    "nombre": "style.css",
+    "tipo": "archivo",
+    "ruta": "/root/mis_proyectos/web/style.css",
+    "contenido": "body { margin: 0; }"
+  },
+  {
+    "id": 8,
+    "nombre": "notas.txt",
+    "tipo": "archivo",
+    "ruta": "/root/mis_proyectos/notas.txt",
+    "contenido": "Notas importantes"
+  },
+  {
+    "id": 2,
+    "nombre": "documentos",
+    "tipo": "carpeta",
+    "ruta": "/root/documentos",
+    "contenido": ""
+  },
+  {
+    "id": 7,
+    "nombre": "README.md",
+    "tipo": "archivo",
+    "ruta": "/root/documentos/README.md",
+    "contenido": "# Mi Proyecto"
+  }
+]
