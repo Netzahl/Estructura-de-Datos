@@ -1,0 +1,42 @@
+{
+  "version": "1.0",
+  "contador_id": 6,
+  "root": {
+    "id": 0,
+    "nombre": "root",
+    "tipo": "carpeta",
+    "contenido": "",
+    "children": [
+      {
+        "id": 2,
+        "nombre": "carpeta2",
+        "tipo": "carpeta",
+        "contenido": "",
+        "children": [
+          {
+            "id": 4,
+            "nombre": "reprobados.com",
+            "tipo": "carpeta",
+            "contenido": "",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "nombre": "carpeta3",
+        "tipo": "carpeta",
+        "contenido": "",
+        "children": [
+          {
+            "id": 5,
+            "nombre": "recursadores.com",
+            "tipo": "carpeta",
+            "contenido": "",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

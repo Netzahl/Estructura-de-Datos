@@ -47,3 +47,40 @@ def test_exportar_preorden():
     nombres = [item['nombre'] for item in recorrido]
     # Preorden: root -> a -> b -> c
     assert nombres == ['root', 'a', 'b', 'c']
+
+def test_guardar_cargar_con_papelera():
+    """Test guardar y cargar árbol con papelera."""
+    import tempfile
+    
+    arbol1 = Arbol()
+    arbol1.crear_nodo("/root", "test", "carpeta")
+    arbol1.crear_nodo("/root/test", "file.txt", "archivo", "contenido")
+    
+    # Eliminar a papelera
+    nodo = arbol1._encontrar_nodo_por_ruta("/root/test")
+    arbol1.eliminar_nodo(nodo.id, usar_papelera=True)
+    
+    with tempfile.NamedTemporaryFile(mode='w', suffix='.json', delete=False) as f:
+        temp_file = f.name
+    
+    try:
+        arbol1.guardar_json(temp_file)
+        
+        arbol2 = Arbol()
+        exito, msg = arbol2.cargar_json(temp_file)
+        
+        assert exito is True
+        
+        # Verificar papelera
+        items, msg = arbol2.ver_papelera()
+        assert len(items) == 1
+        assert items[0][2] == "test"  # nombre
+        assert items[0][4] == 2  # cantidad de elementos (carpeta + archivo)
+        
+        # Verificar restauración
+        exito, msg = arbol2.restaurar_papelera(0)
+        assert exito is True
+        assert arbol2.obtener_nodo_por_id(nodo.id) is not None
+    finally:
+        if os.path.exists(temp_file):
+            os.remove(temp_file)

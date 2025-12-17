@@ -1,0 +1,51 @@
+{
+  "version": "1.0",
+  "contador_id": 5,
+  "root": {
+    "id": 0,
+    "nombre": "root",
+    "tipo": "carpeta",
+    "contenido": "",
+    "children": [
+      {
+        "id": 4,
+        "nombre": "carpeta2",
+        "tipo": "carpeta",
+        "contenido": "",
+        "children": []
+      }
+    ]
+  },
+  "papelera": [
+    {
+      "nodo": {
+        "id": 1,
+        "nombre": "carpeta1",
+        "tipo": "carpeta",
+        "contenido": "",
+        "children": [
+          {
+            "id": 2,
+            "nombre": "archivo1.txt",
+            "tipo": "archivo",
+            "contenido": "Contenido 1",
+            "children": []
+          },
+          {
+            "id": 3,
+            "nombre": "archivo2.txt",
+            "tipo": "archivo",
+            "contenido": "Contenido 2",
+            "children": []
+          }
+        ]
+      },
+      "padre_original_id": 0,
+      "ids": [
+        1,
+        2,
+        3
+      ]
+    }
+  ]
+}

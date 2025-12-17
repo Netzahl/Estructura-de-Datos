@@ -266,14 +266,24 @@ class Arbol:
         return self.ruta_actual
     
     def guardar_json(self, archivo):
-        """Guarda el árbol completo en un archivo JSON."""
+        """Guarda el árbol completo en un archivo JSON, incluyendo la papelera."""
         import json
         
         try:
+            # Serializar la papelera
+            papelera_serializada = []
+            for item in self.papelera:
+                papelera_serializada.append({
+                    "nodo": item["nodo"].to_dict(),
+                    "padre_original_id": item["padre_original"].id,
+                    "ids": item["ids"]
+                })
+            
             data = {
                 "version": "1.0",
                 "contador_id": self.contador_id,
-                "root": self.root.to_dict()
+                "root": self.root.to_dict(),
+                "papelera": papelera_serializada
             }
             
             with open(archivo, 'w', encoding='utf-8') as f:
@@ -282,10 +292,9 @@ class Arbol:
             return True, f"Árbol guardado en {archivo}"
         except Exception as e:
             return False, f"Error al guardar: {str(e)}"
-        
 
     def cargar_json(self, archivo):
-        """Carga el árbol desde un archivo JSON."""
+        """Carga el árbol desde un archivo JSON, incluyendo la papelera."""
         import json
         
         try:
@@ -323,8 +332,26 @@ class Arbol:
             # Reconstruir desde la raíz
             self.root = reconstruir_nodo(data["root"])
             self.ruta_actual = "/root"
-
-            self.trie.reconstruir_desde_arbol(self) 
+            
+            # Reconstruir Trie
+            self.trie.reconstruir_desde_arbol(self)
+            
+            # Reconstruir papelera
+            papelera_data = data.get("papelera", [])
+            for item_data in papelera_data:
+                # Reconstruir el nodo eliminado
+                nodo_eliminado = reconstruir_nodo(item_data["nodo"], padre=None)
+                
+                # Buscar el padre original
+                padre_original_id = item_data["padre_original_id"]
+                padre_original = self.nodos.get(padre_original_id)
+                
+                if padre_original:
+                    self.papelera.append({
+                        "nodo": nodo_eliminado,
+                        "padre_original": padre_original,
+                        "ids": item_data["ids"]
+                    })
             
             return True, f"Árbol cargado desde {archivo}"
         
