@@ -38,5 +38,20 @@
         ]
       }
     ]
-  }
+  },
+  "papelera": [
+    {
+      "nodo": {
+        "id": 1,
+        "nombre": "carpeta1",
+        "tipo": "carpeta",
+        "contenido": "",
+        "children": []
+      },
+      "padre_original_id": 0,
+      "ids": [
+        1
+      ]
+    }
+  ]
 }
